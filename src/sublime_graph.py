@@ -18,17 +18,25 @@ plt.figure(figsize=(12,4))
 ax1 = plt.subplot(1,2,1)
 
 x_values = range(len(months))
-ax1.plot(x_values,visits_per_month,marker='x')
+ax1.plot(x_values,visits_per_month,marker='o')
 ax1.set_xlabel("Month")
 ax1.set_ylabel("Visits")
 ax1.set_xticks(x_values)
 ax1.set_xticklabels(months)
 
 ax2 = plt.subplot(1,2,2)
-ax2.plot(x_values,key_limes_per_month)
-ax2.plot(x_values,persian_limes_per_month)
-ax2.plot(x_values,blood_limes_per_month)
+ax2.plot(x_values,key_limes_per_month,color='red')
+ax2.plot(x_values,persian_limes_per_month,color='blue')
+ax2.plot(x_values,blood_limes_per_month,color='green')
+ax2.legend(["Key Limes","Persian Limes","Blood Limes"])
+ax2.set_xticks(x_values)
+ax2.set_xticklabels(months)
 
+ax1.set_title("Visits Over Month")
+ax2.set_title("Limes Sold by Month")
 
+plt.tight_layout()
+
+plt.savefig("sublime_graph.png")
 
 plt.show()
