@@ -11,6 +11,11 @@ source_clicks = ac.groupby('utm_source')['user_id'].count().reset_index()
 #print(source_clicks)
 
 ac['is_click'] = ac['ad_click_timestamp'].map(lambda x: 'True' if x==x else 'False')
+#ac['is_click'] = ac.ad_click_timestamp.apply(lambda x: False if pd.isnull(x) else True)
+
+#print(ac)
+
+
 
 clicks_by_source = ac.groupby(['utm_source','is_click'])['user_id'].count().reset_index()
 
