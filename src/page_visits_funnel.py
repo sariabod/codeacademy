@@ -37,9 +37,9 @@ purchase_df = all_data[ (pd.notnull(all_data['cart_time'])) & (pd.notnull(all_da
 
 
 
-cart_percentage = (1 - len(cart_df)/float(len(all_data))) * 100
-checkout_percentage = (1 - len(checkout_df)/float(len(all_data))) * 100
-purchase_percentage = (1 - len(purchase_df)/float(len(all_data))) * 100
+cart_percentage = (len(cart_df)/float(len(all_data))) * 100
+checkout_percentage = (len(checkout_df)/float(len(all_data))) * 100
+purchase_percentage = (len(purchase_df)/float(len(all_data))) * 100
 
 
 print("cart: " ,cart_percentage)
