@@ -16,12 +16,12 @@ percentage_ceballos =  total_ceballos / len(survey_responses)
 
 #print(percentage_ceballos)
 
-possible_surveys = np.random.binomial(len(survey_responses),.47,10000) / len(survey_responses)
+possible_surveys = np.random.binomial(len(survey_responses),.54,10000) / len(survey_responses)
 
 #print(possible_surveys)
 
-#plt.hist(possible_surveys,range=(0,1), bins=20)
-#plt.show()
+plt.hist(possible_surveys,range=(0,1), bins=20)
+plt.show()
 
 
 print(possible_surveys)
@@ -30,7 +30,7 @@ ceballos_loss_surveys = np.mean(possible_surveys < .5)
 print(ceballos_loss_surveys)
 
 
-large_survey = np.random.binomial(7000,.47,10000) / 7000
+large_survey = np.random.binomial(7000,.54,10000) / 7000
 
 ceballos_loss_new = np.mean(large_survey < .5)
 
