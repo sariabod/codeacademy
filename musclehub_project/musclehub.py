@@ -63,6 +63,7 @@ plt.pie(ab_counts,labels=['A', 'B'], autopct='%0.2f%%')
 plt.axis('equal')
 plt.savefig('ab_test_pie_chart.png')
 #plt.show()
+plt.clf()
 
 ax1 = plt.subplot()
 plt.title('Percent of Visitors that Apply')
@@ -73,7 +74,7 @@ ax1.set_yticks(yticks[0:5])
 ax1.set_yticklabels(ytickl[0:5])
 plt.savefig('percent_visitor_apply.png')
 #plt.show()
-
+plt.clf()
 
 ax3 = plt.subplot()
 plt.title('Percent of Applicants that Purchase')
@@ -84,6 +85,7 @@ ax3.set_yticks(yticks)
 ax3.set_yticklabels(ytickl)
 plt.savefig('percent_apply_purchase.png')
 #plt.show()
+plt.clf()
 
 ax4 = plt.subplot()
 plt.title('Percent of Visitors that Purchase')
@@ -94,6 +96,7 @@ ax4.set_yticks(yticks[0:5])
 ax4.set_yticklabels(ytickl[0:5])
 plt.savefig('percent_visitor_apply_purchase.png')
 #plt.show()
+plt.clf()
 
 
 
